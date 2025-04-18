@@ -1,0 +1,118 @@
+//JAMB-Style Pass/Fail Function
+
+function checkJAMBScore(score) {
+    if (score >= 180) {
+        console.log("Passed");
+    } else {
+        console.log("Failed");
+    }
+}
+// Example:
+checkJAMBScore(200);
+checkJAMBScore(150);
+
+
+// Voting Eligibility Function
+function checkVotingEligibility(age) {
+    if (age >= 18) {
+        return "You are eligible to vote";
+    } else {
+        return "Not eligible";
+    }
+}
+// Example:
+console.log(checkVotingEligibility(20));
+console.log(checkVotingEligibility(16));
+
+// Grade Classification Function
+function gradeClassification(name, score) {
+    if (score >= 90) {
+        return `${name}: Excellent`;
+    } else if (score >= 75) {
+        return `${name}: Good`;
+    } else if (score >= 50) {
+        return `${name}: Average`;
+    } else {
+        return `${name}: Fail`;
+    }
+}
+// Example:
+console.log(gradeClassification("Alice", 95));
+console.log(gradeClassification("Bob", 60)); 
+
+// Access Granted Function
+function grantAccess(hasID, isAbove18) {
+    if (hasID && isAbove18) {
+        return "Access granted";
+    } else {
+        return "Access denied";
+    }
+}
+// Example:
+console.log(grantAccess(true, true));
+console.log(grantAccess(true, false));
+
+// Loop Through Scores
+function evaluateScores(scores) {
+    for (let i = 0; i < scores.length; i++) {
+        if (scores[i] > 50) {
+            console.log(`Score ${scores[i]}: Pass`);
+        } else {
+            console.log(`Score ${scores[i]}: Fail`);
+        }
+    }
+}
+// Example:
+evaluateScores([45, 60, 75, 30]);
+
+// Arrow Function for Math and English
+const passedBothSubjects = (mathScore, englishScore) => {
+    if (mathScore >= 50 && englishScore >= 50) {
+        return "Yes";
+    } else {
+        return "No";
+    }
+};
+// Example:
+console.log(passedBothSubjects(60, 55));
+console.log(passedBothSubjects(40, 70));
+
+// Email or Phone Check
+function validateSignUp(email, phoneNumber) {
+    if (email || phoneNumber) {
+        return "Sign-up successful";
+    } else {
+        return "Please provide an email or phone number";
+    }
+}
+// Example:
+console.log(validateSignUp("user@example.com", null));
+console.log(validateSignUp(null, null));
+
+// Username and Password Validation
+function validateCredentials(username, password) {
+    if (!username || !password) {
+        return "Invalid input";
+    } else {
+        return "Valid input";
+    }
+}
+// Example:
+console.log(validateCredentials("", "secure123")); // Output: Invalid input
+console.log(validateCredentials("admin", "secure123")); // Output: Valid input
+
+//  Full-Time or Part-Time Worker
+function checkWorkType(hoursWorked) {
+    return hoursWorked >= 40 ? "Full-time" : "Part-time";
+}
+// Example:
+console.log(checkWorkType(45)); // Output: Full-time
+console.log(checkWorkType(30)); // Output: Part-time
+
+// Larger of Two Numbers (Arrow Function)
+const getLargerNumber = (num1, num2) => {
+    return num1 > num2 ? num1 : num2;
+};
+// Example:
+console.log(getLargerNumber(10, 20)); // Output: 20
+console.log(getLargerNumber(50, 30)); // Output: 50
